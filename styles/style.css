@@ -1,0 +1,149 @@
+:root {
+  --body-back: #141414;
+  --card-back: #1f1f1f;
+  --white-color: white;
+  --yellow-color: rgba(196, 248, 42, 1);
+  --black-color: rgba(51, 51, 51, 1);
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: flex;
+  object-fit: cover;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--body-back);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 424px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  background-color: var(--card-back);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  border-radius: 1.2rem;
+}
+
+.card__avatar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card__avatar-info__name {
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.card__avatar-info__location {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-weight: 700;
+  color: var(--yellow-color);
+  text-align: center;
+}
+
+.card__description {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card__list__item {
+  background-color: var(--black-color);
+  width: 30.4rem;
+  border-radius: 0.8rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.card__list__item:active {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+.card__list__item__link {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: inherit;
+  font-weight: 700;
+}
